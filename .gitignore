@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Model weights & exports (download from source; do not commit)
+*.pt
+*.onnx
+*.engine
+weights/
+
+# Datasets
+datasets/
+coco128/
+*.zip
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

@@ -1,0 +1,8 @@
+model,deployment,resolution,inference_ms,real_fps
+YOLOv9-C,Jetson Native,640x480,530.0,1.9
+YOLOv9-C,Jetson Native,320x216,275.0,3.9
+YOLOv9-T (engine),Jetson Native,640x480,93.0,10.8
+YOLO26n,Jetson Docker,640x480,130.0,7.7
+YOLOv9-C,Jetson Docker,640x480,910.0,1.1
+YOLOv9-C,Laptop CPU,640x480,800.0,1.25
+YOLO11x,SSH offload (remote GPU),640x480,84.7,11.8

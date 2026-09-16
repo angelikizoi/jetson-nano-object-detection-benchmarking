@@ -1,0 +1,7 @@
+model,deployment,resolution,map_50,map_50_95,preprocess_ms,inference_ms,nms_ms
+YOLOv9-C,Jetson Native,640x640,0.823,0.661,3.7,588.5,17.9
+YOLOv9-C,Jetson Native,416x416,0.775,0.624,4.2,311.6,16.1
+YOLOv9-C,Jetson Docker,640x640,0.807,0.635,5.8,982.0,24.0
+YOLOv9-C,Jetson Docker,416x416,0.769,0.613,3.3,472.8,18.1
+YOLOv9-C,Laptop CPU,640x640,0.797,0.626,2.9,1146.0,4.0
+YOLOv9-C,Desktop GPU,640x640,0.797,0.626,0.4,10.3,0.4

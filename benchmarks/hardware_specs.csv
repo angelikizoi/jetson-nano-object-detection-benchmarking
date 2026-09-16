@@ -1,0 +1,11 @@
+specification,Jetson Nano 2GB,Consumer laptop,Desktop workstation
+CPU,Quad-core ARM Cortex-A57 @ 1.43GHz,Intel Core i7-7500U @ 2.7GHz (4 threads),AMD Ryzen 7 7700X (16 threads)
+GPU,NVIDIA Maxwell 128 CUDA cores,-,NVIDIA GeForce RTX 5060 Ti
+GPU architecture,Maxwell (2014),-,Blackwell (2025)
+CUDA cores,128,-,4608 (144 Tensor Cores)
+RAM,2GB LPDDR4 shared CPU/GPU,16GB DDR4,64GB DDR5 (16GB VRAM GDDR7)
+Memory bandwidth,25.6 GB/s,-,448 GB/s
+CUDA version,10.2,-,13.1
+OS,Ubuntu 18.04 (JetPack 4.6.1),Catchy OS x86_64,Ubuntu 24.04
+Python,3.6,3.14,3.12
+Power consumption,5-10W,~15W,180W

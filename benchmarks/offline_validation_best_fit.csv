@@ -1,0 +1,6 @@
+model,deployment,format,map_50,map_50_95,preprocess_ms,inference_ms,nms_ms
+YOLOv9-T,Jetson Native,PyTorch,0.616,0.473,5.6,139.4,13.2
+YOLOv9-T,Jetson Native,TensorRT engine,0.610,0.465,3.1,98.0,27.2
+YOLO26n,Jetson Docker,PyTorch,0.649,0.477,3.9,162.2,3.6
+YOLO26n,Jetson Docker,ONNX,0.636,0.473,4.5,123.4,2.3
+YOLO11x,Desktop GPU,PyTorch,0.852,0.695,0.3,15.7,0.4
