@@ -14,7 +14,7 @@ and benchmarking every configuration.
    (torch, torchvision, onnxruntime-gpu, protobuf/onnx conflicts, an
    OpenCV-with-CUDA rebuild). See [`docs/setup-guide.md`](docs/setup-guide.md).
 2. **On-device optimization** — exporting to a **TensorRT engine**
-   (`.pt → ONNX → TensorRT`, with int8/fp16 quantization) to squeeze real-time
+   (`.pt → TensorRT`, with int8 quantization) to squeeze real-time
    speed out of 128 Maxwell cores, and finding where the 2GB memory ceiling
    stops you.
 3. **Remote-GPU offload** — an original **edge/cloud pipeline** where the Nano
