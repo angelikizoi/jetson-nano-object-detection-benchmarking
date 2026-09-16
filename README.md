@@ -1,11 +1,27 @@
 # Object Detection on the NVIDIA Jetson Nano 2GB — a deployment benchmarking study
 
-Running modern YOLO object detectors on a $59, 2GB edge device, and measuring
-what it actually costs. This repository benchmarks the same models across four
-deployment environments — **Jetson native, Jetson Docker, a laptop CPU, and a
-desktop GPU** — plus a **remote-GPU offload pipeline** tunnelled over SSH, and
-documents the (considerable) work of getting a detector to run on JetPack 4.6.1
-at all.
+Getting modern YOLO detectors to run — and run usably — on a $59, 2GB edge device. 
+This project takes object detection on the Jetson Nano 2GB end to end: standing 
+detectors up across different deployment strategies, optimizing them for the hardware, 
+building a remote-GPU offload pipeline for models the Nano can't run alone, 
+and benchmarking every configuration.
+
+## What this project covers
+
+1. **Deployment** — running YOLO two ways on JetPack 4.6.1: the quick **Docker**
+   route (prebuilt Ultralytics image) and a **native install**, which meant
+   resolving JetPack's Python 3.6 / ARM64 dependency chain by hand
+   (torch, torchvision, onnxruntime-gpu, protobuf/onnx conflicts, an
+   OpenCV-with-CUDA rebuild). See [`docs/setup-guide.md`](docs/setup-guide.md).
+2. **On-device optimization** — exporting to a **TensorRT engine**
+   (`.pt → ONNX → TensorRT`, with int8/fp16 quantization) to squeeze real-time
+   speed out of 128 Maxwell cores, and finding where the 2GB memory ceiling
+   stops you.
+3. **Remote-GPU offload** — an original **edge/cloud pipeline** where the Nano
+   captures and displays while a remote GPU does inference, tunnelled over SSH.
+   Code and architecture in [`ssh_pipeline/`](ssh_pipeline/).
+4. **Benchmarking** — measuring accuracy and speed for every configuration
+   across four environments, offline (COCO128) and in real time (webcam).
 
 
 ## Why this is interesting

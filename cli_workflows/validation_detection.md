@@ -38,7 +38,7 @@ python detect.py \
 ## TensorRT export (.pt → engine)
 
 ```bash
-python export.py --weights yolov9-t-converted.pt --include engine --img 640 --data data/coco128.yaml
+python export.py --weights yolov9-t-converted.pt --include engine --img 640 --data data/coco128.yaml --device 0 --int8
 ```
 
 On the Nano this succeeded only for the smallest model (yolov9-t) — larger
